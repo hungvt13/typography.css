@@ -5,6 +5,12 @@ hr {
   height: 1px;
 }
 
+#switch{
+  position: absolute;
+  top:10;
+  right:10;
+}
+
 .main-container {
   display: flex;
   flex-direction: row;
@@ -16,8 +22,7 @@ hr {
 
 .left-side {
   display: relative;
-  padding-right: 2em;
-  padding-left: 2em;
+  padding: 0em 2em 0em 2em;
 }
 
 .right-side {
