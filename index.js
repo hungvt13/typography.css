@@ -2,7 +2,7 @@ let app = new Vue({
     el: '#app',
     data: {
         message: 'Hello Vue!',
-        selected: 'A',
+        selected: '',
         options: [],
         leftSideClass: 'left-side',
     },
