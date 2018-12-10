@@ -1,6 +1,6 @@
 let nightMode = false;
 
-const clicked = () => {
+const switchClicked = () => {
   const nightBg = "black";
   const nightTxt = "white";
   const dayBg = "white";
