@@ -13,16 +13,13 @@
   <link rel="stylesheet" href="css/typography.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/x-icon" href="https://img.icons8.com/ios/96/000000/quill-with-ink.png" ;
-  <!-- production version, optimized for size and speed -->
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
 </head>
 
 <body>
 
-  <div class="main-container" id="app">
+  <div class="main-container">
 
-    <div v-bind:class="[leftSideClass, selected]">
+    <div class="left-side" id="sample-text">
       <h1>THIS IS HEADER 1</h1>
       <h2>Header 2</h2>
       <p>
@@ -42,11 +39,9 @@
         <label class="star-up_paragraph" id="label">
           Style:
         </label>
-        <select v-model="selected" class="form-select">
-          <option v-for="option in options" v-bind:value="option.value">
-            {{ option.text }}
-          </option>
-        </select>
+
+        <select class="form-select" id="mySelect" onchange="changeClass()"></select>
+
       </div>
       <br />
 
