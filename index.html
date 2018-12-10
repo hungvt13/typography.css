@@ -6,6 +6,7 @@
   <title>Typography.css</title>
   <meta name="Hung Tran" content="Demo">
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
   <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
@@ -14,9 +15,7 @@
 
   <link rel="stylesheet" href="css/typography.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/x-icon" href="https://img.icons8.com/ios/96/000000/quill-with-ink.png";
-
-  <!-- production version, optimized for size and speed -->
+  <link rel="icon" type="image/x-icon" href="https://img.icons8.com/ios/96/000000/quill-with-ink.png" ; <!-- production version, optimized for size and speed -->
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
 </head>
@@ -24,12 +23,15 @@
 <body>
 
   <div class="main-container" id="app">
-    
+
     <div v-bind:class="[leftSideClass, selected]">
       <h1>THIS IS HEADER 1</h1>
       <h2>Header 2</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue. Orci ac auctor augue mauris augue. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. Sit amet consectetur adipiscing elit ut aliquam purus sit. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Gravida dictum fusce ut placerat orci nulla. Vestibulum sed arcu non odio. Blandit volutpat maecenas volutpat blandit aliquam etiam. Aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Ullamcorper eget nulla facilisi etiam dignissim diam quis. Elementum tempus egestas sed sed risus pretium quam vulputate dignissim.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue. Orci ac auctor augue mauris augue. Purus faucibus ornare suspendisse sed nisi
+        lacus sed viverra. Sit amet consectetur adipiscing elit ut aliquam purus sit. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Gravida dictum fusce ut placerat orci nulla. Vestibulum sed arcu non odio. Blandit volutpat
+        maecenas volutpat blandit aliquam etiam. Aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Ullamcorper eget nulla facilisi etiam dignissim diam
+        quis. Elementum tempus egestas sed sed risus pretium quam vulputate dignissim.
       </p>
     </div>
 
@@ -42,26 +44,26 @@
         <label class="star-up_paragraph" id="label">
           Style:
         </label>
-        <select v-model="selected" class="form-select" >
-          <option v-for="option in options" v-bind:value="option.value" >
-             {{ option.text }}
+        <select v-model="selected" class="form-select">
+          <option v-for="option in options" v-bind:value="option.value">
+            {{ option.text }}
           </option>
         </select>
       </div>
       <br />
 
-      <hr/>
+      <hr />
       <br />
-
-        <p class="links star-up_paragraph">
-          <a href="https://raw.githubusercontent.com/hungvt13/typography.css/master/typography.css">Download Typography.css </a>
-          or
-          <a href="https://github.com/hungvt13/typography.css">View on GitHub</a>
-        </p>
-        <p class="links links_small star-up_paragraph">
-          Other works from
-          <a href="">Hung Tran</a>
-        </p>
+    
+      <p class="links start-up_paragraph">
+        <a href="https://raw.githubusercontent.com/hungvt13/typography.css/master/typography.css">Download Typography.css </a>
+        or
+        <a href="https://github.com/hungvt13/typography.css">View on GitHub</a>
+      </p>
+      <p class="links links_small start-up_paragraph">
+        Other works from
+        <a href="">Hung Tran</a>
+      </p>
 
     </div>
 

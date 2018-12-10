@@ -9,21 +9,19 @@ hr {
   display: flex;
   flex-direction: row;
   height: 100vh;
-  border-style: solid;
   justify-content: center;
   align-items: center;
+  padding: 2em 0 2em 0;
 }
 
 .left-side{
   display: relative;
-  flex-grow: 2;
   padding-right: 2em;
   padding-left: 2em;
 }
 
 .right-side{
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -50,6 +48,10 @@ hr {
   font-weight: 400;
 }
 
+.links{
+  text-align: center;
+}
+
 .links>a{
   color: rgb(112, 112, 112);
   text-decoration: underline;
@@ -58,4 +60,25 @@ hr {
 
 .links_small{
   font-size: 0.9em;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media only screen and (max-width: 834px) {
+  .main-container{
+    display: grid;
+    height: auto;
+    grid-template-areas: "title" "paragraph";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding-top: 1em;
+  }
+  .main-header{
+    font-size: 3.4em;
+  }
+  .left-side{
+    grid-area: paragraph;
+  }
+  .right-side{
+    grid-area: title
+  }
 }
