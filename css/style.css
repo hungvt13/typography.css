@@ -126,13 +126,11 @@ hr {
   font-size: 1em;
 }
 
-#select-paragraph{
-
-}
-
-#select-header{
-
 }
 #customizeBtn{
-  margin-top: 0.5em;
+  padding-top: 00em;
+}
+
+.cust-btn{
+  margin-top: 1em;
 }

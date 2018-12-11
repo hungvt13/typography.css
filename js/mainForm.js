@@ -1,4 +1,4 @@
-let select = document.getElementById('mySelect');
+let select = document.getElementById('select-preset');
 let val = select.value;
 const optionList = select.options;
 const options = [
@@ -31,7 +31,7 @@ setSelected('sample-text',options[0].value);
 let classList = getClassList('sample-text');
 
 const changeClass = () => {
-  const selectedStyle = getSelected('mySelect');
+  const selectedStyle = getSelected('select-preset');
   classList.remove(classList[1]);
   classList.add(selectedStyle);
 };
