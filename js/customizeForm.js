@@ -86,7 +86,9 @@ const goBackPresets = () => {
 };
 
 // add event to button for collapsible
-coll[0].addEventListener("click", function() {
+const custBtnClicked = () => {
+  // get class list for the customize buttons
+  const custBtn = getClassList('customizeBtn');
   // get the current selected preset
   // set start values for the two options
   selectHeader.selectedIndex = select.selectedIndex;
@@ -99,8 +101,8 @@ coll[0].addEventListener("click", function() {
   changeClassParagraph();
 
   // expand & collapise the element
-  this.classList.toggle("active");
-  let content = this.previousElementSibling;
+  custBtn.toggle("active");
+  let content = document.getElementById('content-panel');
 
   // if clicked show the preset elements
   // hide the customize options
@@ -118,4 +120,5 @@ coll[0].addEventListener("click", function() {
     label.style.display ="none";
   }
   changeToggleBtn('customizeBtn','customize','preset');
-});
+};
+//coll[0].addEventListener("click", function() );

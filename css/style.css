@@ -41,7 +41,7 @@ hr {
 
 .left-side {
   display: relative;
-  padding: 0em 2em 0em 2em;
+  padding: 0em 2em 0em 6em;
 }
 
 .right-side {
@@ -50,7 +50,7 @@ hr {
   justify-content: center;
   align-items: center;
   padding-left: 2em;
-  padding-right: 2em;
+  padding-right: 6em;
 }
 
 .main-header {
