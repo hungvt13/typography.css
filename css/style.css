@@ -86,7 +86,7 @@ hr {
   font-size: 0.9em;
 }
 
-@media only screen and (max-width: 834px) {
+@media only screen and (max-width: 1000px) {
   .main-container {
     height: auto;
     padding-top: 1em;
@@ -134,8 +134,4 @@ hr {
 
 .cust-btn{
   margin-top: 1em;
-}
-
-.flex-container{
-  display: flex;
 }
