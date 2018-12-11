@@ -88,12 +88,9 @@ hr {
 
 @media only screen and (max-width: 834px) {
   .main-container {
-    display: grid;
     height: auto;
-    grid-template-areas: "title""paragraph";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
     padding-top: 1em;
+    flex-direction: column;
   }
 
   .main-header {
@@ -101,11 +98,14 @@ hr {
   }
 
   .left-side {
-    grid-area: paragraph;
+    order: 2;
+    padding: 0em 2em 0em 2em;
   }
 
   .right-side {
-    grid-area: title
+    order: 1;
+    padding-left: 2em;
+    padding-right: 2em;
   }
 }
 
@@ -118,6 +118,7 @@ hr {
 
 .content-box{
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -133,4 +134,8 @@ hr {
 
 .cust-btn{
   margin-top: 1em;
+}
+
+.flex-container{
+  display: flex;
 }
