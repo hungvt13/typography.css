@@ -11,7 +11,7 @@ hr {
   right:10;
 }
 
-.btn.btn-link, .btn.btn-link:active {
+.btn.btn-link, .btn.btn-link:active, .btn.btn-link.active {
   color: #007EA7;
   font-weight: bold;
 }
@@ -107,4 +107,27 @@ hr {
   .right-side {
     grid-area: title
   }
+}
+
+.content {
+  font-size: 0.8rem;
+  display: none;
+  overflow: hidden;
+  background-color: white;
+}
+
+.label-cust{
+  padding-right: 0.4em;
+  font-size: 1em;
+}
+
+#select-paragraph{
+
+}
+
+#select-header{
+
+}
+#customizeBtn{
+  margin-top: 0.5em;
 }

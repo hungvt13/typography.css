@@ -29,10 +29,10 @@
   <div class="main-container">
 
     <div class="left-side" id="sample-text">
-      <h1>THIS IS HEADER 1</h1>
-      <h2>Header 2</h2>
+      <h1 id="sample-h1">THIS IS HEADER 1</h1>
+      <h2 id="sample-h2">Header 2</h2>
       <br />
-      <p>
+      <p id="sample-paragraph">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue. Orci ac auctor augue mauris augue. Purus faucibus ornare suspendisse sed nisi
         lacus sed viverra. Sit amet consectetur adipiscing elit ut aliquam purus sit. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Gravida dictum fusce ut placerat orci nulla. Vestibulum sed arcu non odio. Blandit volutpat
         maecenas volutpat blandit aliquam etiam. Aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Ullamcorper eget nulla facilisi etiam dignissim diam
@@ -46,12 +46,25 @@
       <h5 class="star-up_paragraph animated animated fadeIn">Plug and use CSS fonts</h5>
       <br />
       <div class="selector animated fadeIn">
-        <label class="star-up_paragraph" id="label">
-          Preset:
-        </label>
+        <label class="start-up_paragraph" id="label">Preset:</label>
         <select class="form-select" id="mySelect" onchange="changeClass()"></select>
-        <!--button class="btn btn-link" id="customizeBtn">Customize</button-->
       </div>
+
+      <div class="content">
+        <div class="form-group">
+          <div class="input-group">
+            <label class="label-cust start-up_paragraph">Headers:</label>
+            <select class="form-select" id="select-header" onchange="changeClassHeader()"></select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <label class="label-cust start-up_paragraph">Paragraph:</label>
+            <select class="form-select" id="select-paragraph" onchange="changeClassParagraph()"></select>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-link collapsible start-up_paragraph" id="customizeBtn">customize</button>
 
       <br />
       <hr />
@@ -70,8 +83,9 @@
     </div>
   </div>
 
-  <script src="js/index.js"></script>
+  <script src="js/mainForm.js"></script>
   <script src="js/switchMode.js"></script>
+  <script src="js/customizeForm.js"></script>
 </body>
 
 </html>
