@@ -11,6 +11,24 @@ hr {
   right:10;
 }
 
+.btn.btn-link, .btn.btn-link:active {
+  color: #007EA7;
+  font-weight: bold;
+}
+
+.btn.btn-link:focus, .btn.btn-link:hover{
+  color: #003459;
+}
+
+.form-switch input:checked+.form-icon {
+  background: #007EA7;
+  border-color: #007EA7;
+}
+
+.form-switch input:focus+.form-icon {
+  border-color: #007EA7;
+}
+
 
 .main-container {
   display: flex;
