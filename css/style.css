@@ -116,6 +116,11 @@ hr {
   background-color: white;
 }
 
+.content-box{
+  display: flex;
+  align-items: center;
+}
+
 .label-cust{
   padding-right: 0.4em;
   font-size: 1em;

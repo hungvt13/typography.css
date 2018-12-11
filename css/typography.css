@@ -11,7 +11,11 @@ h1, h2, h3, h4, h5, h5 {
   margin: 0;
 }
 
-.general h1, .general h2, .general h3, .general h4, .general h5, .general h6, .general .general_header {
+.general h1, .general h2, .general h3, .general h4, .general h5, .general h6 {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.general_header {
   font-family: "Open Sans Condensed", sans-serif;
 }
 
