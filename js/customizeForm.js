@@ -1,4 +1,3 @@
-let coll = document.getElementsByClassName("collapsible");
 let label = document.getElementById("label");
 
 let selectHeader = document.getElementById('select-header');
