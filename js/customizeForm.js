@@ -1,11 +1,9 @@
 let coll = document.getElementsByClassName("collapsible");
-let i;
 let label = document.getElementById("label");
 
 let selectHeader = document.getElementById('select-header');
 let selectParagraph = document.getElementById('select-paragraph');
-let optionListHeaders = selectHeader.options;
-let optionListParagraphs = selectParagraph.options;
+
 
 let isCustomize = false; //control the html display on customize button
 
@@ -19,14 +17,20 @@ let isChangedHeader= false;
 let isChangedParagraph = false;
 
 //mapping values to customize options
-options.forEach(option => {
-  optionListHeaders.add(
-    new Option(option.text, option.valueH,option.selected)
-  );
-  optionListParagraphs.add(
-    new Option(option.text, option.valueP,option.selected)
-  );
-});
+//self invoke
+(function(){
+  let optionListHeaders = selectHeader.options;
+  let optionListParagraphs = selectParagraph.options;
+  options.forEach(option => {
+    optionListHeaders.add(
+      new Option(option.text, option.valueH,option.selected)
+    );
+    optionListParagraphs.add(
+      new Option(option.text, option.valueP,option.selected)
+    );
+  });
+}());
+
 
 // change the elements separately
 // change the class for headers only
@@ -50,6 +54,35 @@ const changeClassParagraph= () => {
   if(classListParagraph[0] != 'undefined') classListParagraph.remove(classListParagraph[0]);
   //add style class for paragraph
   classListParagraph.add(selectedStyle);
+};
+
+// function to swapping names for toggle buttons
+const changeToggleBtn = (ele,beforeName,afterName) => {
+  // change the Customize buttons when clicked
+  let custBtn = document.getElementById(ele);
+  if(!isCustomize){
+    isCustomize = true;
+    custBtn.innerHTML = afterName;
+
+  }
+  else{
+    isCustomize = false;
+    custBtn.innerHTML = beforeName;
+    goBackPresets();
+  }
+};
+
+// function to clean up optimize optons and switch back to preset options
+const goBackPresets = () => {
+  // removing customized option
+  if(classListHeader[0] != 'undefined') {
+    classListHeader.remove(classListHeader[0]);
+    classListHeader2.remove(classListHeader2[0]);
+  }
+  if(classList[0] != 'undefined') classList.remove(classList[1]);
+  if(classListParagraph[0] != 'undefined') classListParagraph.remove(classListParagraph[0]);
+  // switch to presets
+  changeClass();
 };
 
 // add event to button for collapsible
@@ -84,25 +117,5 @@ coll[0].addEventListener("click", function() {
     select.style.display ="none";
     label.style.display ="none";
   }
-
-  // change the Customize buttons when clicked
-  let custBtn = document.getElementById('customizeBtn');
-  if(!isCustomize){
-    isCustomize = true;
-    custBtn.innerHTML = 'preset';
-
-  }
-  else{
-    isCustomize = false;
-    custBtn.innerHTML = 'customize';
-    // removing customized option
-    if(classListHeader[0] != 'undefined') {
-      classListHeader.remove(classListHeader[0]);
-      classListHeader2.remove(classListHeader2[0]);
-    }
-    if(classList[0] != 'undefined') classList.remove(classList[1]);
-    if(classListParagraph[0] != 'undefined') classListParagraph.remove(classListParagraph[0]);
-    // switch to presets
-    changeClass();
-  }
+  changeToggleBtn('customizeBtn','customize','preset');
 });

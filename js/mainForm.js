@@ -1,6 +1,4 @@
 let select = document.getElementById('select-preset');
-let val = select.value;
-const optionList = select.options;
 const options = [{
     text: 'general',
     value: 'general',
@@ -60,10 +58,13 @@ const getClassList = (ele) => document.getElementById(ele).classList;
 //get current selected style
 const getSelected = (ele) => document.getElementById(ele).value;
 
-options.forEach(option =>
-  optionList.add(
-    new Option(option.text, option.value, option.selected)
-  ));
+(function(){
+  const optionList = select.options;
+  options.forEach(option =>
+    optionList.add(
+      new Option(option.text, option.value, option.selected)
+    ));
+})();
 
 //set initial value match the select option
 setSelected('sample-text', options[0].value);
