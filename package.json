@@ -1,0 +1,25 @@
+{
+  "name": "ht-typography.css",
+  "version": "0.1.0",
+  "description": "plug and use fonts css stylesheet",
+  "main": "typography.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hungvt13/typography.css.git"
+  },
+  "keywords": [
+    "typography",
+    "css",
+    "html",
+    "fonts"
+  ],
+  "author": "Hung Tran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hungvt13/typography.css/issues"
+  },
+  "homepage": "https://github.com/hungvt13/typography.css#readme"
+}
