@@ -1,64 +1,64 @@
-let label = document.getElementById("label");
+const label = document.getElementById('label');
 
-let selectHeader = document.getElementById('select-header');
-let selectParagraph = document.getElementById('select-paragraph');
+const selectHeader = document.getElementById('select-header');
+const selectParagraph = document.getElementById('select-paragraph');
 
+// Control the html display on customize button
+let isCustomize = false;
 
-let isCustomize = false; //control the html display on customize button
+// Class list for each element
+const classListHeader = getClassList('sample-h1');
+const classListHeader2 = getClassList('sample-h2');
+const classListParagraph = getClassList('sample-paragraph');
 
-//class list for each element
-let classListHeader = getClassList('sample-h1');
-let classListHeader2 = getClassList('sample-h2');
-let classListParagraph = getClassList('sample-paragraph');
+/*
+ *Mapping values to customize options
+ *self invoke
+ */
+(function (){
+  const optionListHeaders = selectHeader.options;
+  const optionListParagraphs = selectParagraph.options;
 
-//control the default for customized option pass from preset
-let isChangedHeader= false;
-let isChangedParagraph = false;
-
-//mapping values to customize options
-//self invoke
-(function(){
-  let optionListHeaders = selectHeader.options;
-  let optionListParagraphs = selectParagraph.options;
-  options.forEach(option => {
-    optionListHeaders.add(
-      new Option(option.text, option.valueH,option.selected)
-    );
-    optionListParagraphs.add(
-      new Option(option.text, option.valueP,option.selected)
-    );
+  options.forEach((option) => {
+    optionListHeaders.add(new Option(option.text, option.valueH, option.selected));
+    optionListParagraphs.add(new Option(option.text, option.valueP, option.selected));
   });
 }());
 
 
-// change the elements separately
-// change the class for headers only
+/*
+ * Change the elements separately
+ * change the class for headers only
+ */
 const changeClassHeader = () => {
   const selectedStyle = getSelected('select-header');
-  //check if a class exist, delete if yes
-  if(classListHeader[0] != 'undefined') {
+  // Check if a class exist, delete if yes
+
+  if(classListHeader[0] !== 'undefined') {
     classListHeader.remove(classListHeader[0]);
     classListHeader2.remove(classListHeader2[0]);
   }
-  //add style class for headers
+  // Add style class for headers
   classListHeader.add(selectedStyle);
   classListHeader2.add(selectedStyle);
 
 };
 
-// change the class for paragraphs only
-const changeClassParagraph= () => {
+// Change the class for paragraphs only
+const changeClassParagraph = () => {
   const selectedStyle = getSelected('select-paragraph');
-  //check if a class exist, delete if yes
-  if(classListParagraph[0] != 'undefined') classListParagraph.remove(classListParagraph[0]);
-  //add style class for paragraph
+  // Check if a class exist, delete if yes
+
+  if(classListParagraph[0] !== 'undefined') classListParagraph.remove(classListParagraph[0]);
+  // Add style class for paragraph
   classListParagraph.add(selectedStyle);
 };
 
-// function to swapping names for toggle buttons
-const changeToggleBtn = (ele,beforeName,afterName) => {
-  // change the Customize buttons when clicked
-  let custBtn = document.getElementById(ele);
+// Function to swapping names for toggle buttons
+const changeToggleBtn = (ele, beforeName, afterName) => {
+  // Change the Customize buttons when clicked
+  const custBtn = document.getElementById(ele);
+
   if(!isCustomize){
     isCustomize = true;
     custBtn.innerHTML = afterName;
@@ -71,53 +71,61 @@ const changeToggleBtn = (ele,beforeName,afterName) => {
   }
 };
 
-// function to clean up optimize optons and switch back to preset options
+// Function to clean up optimize optons and switch back to preset options
 const goBackPresets = () => {
-  // removing customized option
-  if(classListHeader[0] != 'undefined') {
+  // Removing customized option
+  if(classListHeader[0] !== 'undefined') {
     classListHeader.remove(classListHeader[0]);
     classListHeader2.remove(classListHeader2[0]);
   }
-  if(classList[0] != 'undefined') classList.remove(classList[1]);
-  if(classListParagraph[0] != 'undefined') classListParagraph.remove(classListParagraph[0]);
-  // switch to presets
+  if(classList[0] !== 'undefined') classList.remove(classList[1]);
+  if(classListParagraph[0] !== 'undefined') classListParagraph.remove(classListParagraph[0]);
+  // Switch to presets
   changeClass();
 };
 
-// add event to button for collapsible
+// Add event to button for collapsible
 const custBtnClicked = () => {
-  // get class list for the customize buttons
+  // Get class list for the customize buttons
   const custBtn = getClassList('customizeBtn');
-  // get the current selected preset
-  // set start values for the two options
+
+  /*
+   * Get the current selected preset
+   * set start values for the two options
+   */
+
   selectHeader.selectedIndex = select.selectedIndex;
   selectParagraph.selectedIndex = select.selectedIndex;
 
-  //check if preset class exist, delete if yes
-  if(classList[1] != 'undefined') classList.remove(classList[1]);
+  // Check if preset class exist, delete if yes
+  if(classList[1] !== 'undefined') classList.remove(classList[1]);
 
   changeClassHeader();
   changeClassParagraph();
 
-  // expand & collapise the element
-  custBtn.toggle("active");
-  let content = document.getElementById('content-panel');
+  // Expand & collapise the element
+  custBtn.toggle('active');
+  const content = document.getElementById('content-panel');
 
-  // if clicked show the preset elements
-  // hide the customize options
-  if (content.style.display === "inline") {
-    content.style.display = "none"; // the expand element
-    select.style.display ="flex"; // the preset element
-    label.style.display ="flex"; // the label for preset element
+  /*
+   * If clicked show the preset elements
+   * hide the customize options
+   */
+  if (content.style.display === 'inline') {
+    content.style.display = 'none'; // The expand element
+    select.style.display = 'flex'; // The preset element
+    label.style.display = 'flex'; // The label for preset element
   }
-  // hide the preset elements
-  // show the customize options
-  else
-  {
-    content.style.display = "inline";
-    select.style.display ="none";
-    label.style.display ="none";
+
+  /*
+   * Hide the preset elements
+   * show the customize options
+   */
+  else {
+    content.style.display = 'inline';
+    select.style.display = 'none';
+    label.style.display = 'none';
   }
-  changeToggleBtn('customizeBtn','customize','preset');
+  changeToggleBtn('customizeBtn', 'customize', 'preset');
 };
-//coll[0].addEventListener("click", function() );
+// Coll[0].addEventListener('click', function() );

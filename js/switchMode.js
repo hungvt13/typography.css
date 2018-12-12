@@ -1,12 +1,12 @@
 let nightMode = false;
 
 const switchClicked = () => {
-  const nightBg = "#141c29";
-  const nightTxt = "white";
-  const nightTxtCust = "#00A8E8";
-  const dayBg = "white";
-  const dayTxt = "#3b4351";
-  const dayTxtCust = "#007EA7";
+  const nightBg = '#141c29';
+  const nightTxt = 'white';
+  const nightTxtCust = '#00A8E8';
+  const dayBg = 'white';
+  const dayTxt = '#3b4351';
+  const dayTxtCust = '#007EA7';
 
 
   if(!nightMode){
