@@ -1,1 +1,1 @@
-# typography.css
+# typography.css [![GitHub release](https://img.shields.io/github/release-pre/hungvt13/typography.css.svg)](https://github.com/hungvt13/typography.css) [![npm version](https://badge.fury.io/js/ht-typography.css.svg)](https://badge.fury.io/js/ht-typography.css) ![](https://img.shields.io/npm/l/express.svg)
