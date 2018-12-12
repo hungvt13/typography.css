@@ -1,6 +1,6 @@
 {
   "name": "ht-typography.css",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "plug and use fonts css stylesheet",
   "main": "typography.css",
   "scripts": {
