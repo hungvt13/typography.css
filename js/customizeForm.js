@@ -19,9 +19,9 @@ const classListParagraph = getClassList('sample-paragraph');
   const optionListHeaders = selectHeader.options;
   const optionListParagraphs = selectParagraph.options;
 
-  options.forEach((option) => {
-    optionListHeaders.add(new Option(option.text, option.valueH, option.selected));
-    optionListParagraphs.add(new Option(option.text, option.valueP, option.selected));
+  options.forEach((item) => {
+    optionListHeaders.add(new Option(item.text, item.valueH, item.selected));
+    optionListParagraphs.add(new Option(item.text, item.valueP, item.selected));
   });
 }());
 

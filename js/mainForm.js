@@ -60,9 +60,9 @@ const getSelected = (ele) => document.getElementById(ele).value;
 
 (function(){
   const optionList = select.options;
-  options.forEach(option =>
+  options.forEach(item =>
     optionList.add(
-      new Option(option.text, option.value, option.selected)
+      new Option(item.text, item.value, item.selected)
     ));
 })();
 
