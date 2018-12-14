@@ -49,13 +49,13 @@ const options = [{
   },
 ];
 
-//apply option[class] to a class byid
+// apply option[class] to a class byid
 const setSelected = (ele, val) => document.getElementById(ele).classList.add(val);
 
-//get a class list from id
+// get a class list from id
 const getClassList = (ele) => document.getElementById(ele).classList;
 
-//get current selected style
+// get current selected style
 const getSelected = (ele) => document.getElementById(ele).value;
 
 (function(){
@@ -66,10 +66,11 @@ const getSelected = (ele) => document.getElementById(ele).value;
     ));
 })();
 
-//set initial value match the select option
+// set initial value match the select option
 setSelected('sample-text', options[0].value);
 let classList = getClassList('sample-text');
 
+// Change class based on selected preset
 const changeClass = () => {
   const selectedStyle = getSelected('select-preset');
   classList.remove(classList[1]);
