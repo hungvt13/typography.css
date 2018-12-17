@@ -61,4 +61,4 @@ Example Individual Element:
 
 ## License
 
-Animate.css is licensed under the MIT license. (http://opensource.org/licenses/MIT)
+Typography.css is licensed under the MIT license. (http://opensource.org/licenses/MIT)
