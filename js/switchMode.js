@@ -10,13 +10,12 @@ class switchEvent{
   
     if(!nightMode){
       switchEvent.switchMode(nightBg, nightTxt, nightTxtCust);
+      nightMode = true
     }
     else{
       switchEvent.switchMode(dayBg, dayTxt, dayTxtCust);
+      nightMode = false
     }
-  
-    if(nightMode) nightMode = false;
-    else nightMode = true;
   }
   static switchMode(select, text, custText){
     document.body.style.backgroundColor = select;
