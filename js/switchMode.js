@@ -1,31 +1,38 @@
 let nightMode = false;
-
-const switchClicked = () => {
-  const nightBg = '#141c29';
-  const nightTxt = 'white';
-  const nightTxtCust = '#00A8E8';
-  const dayBg = 'white';
-  const dayTxt = '#3b4351';
-  const dayTxtCust = '#007EA7';
-
-
-  if(!nightMode){
-    document.body.style.backgroundColor = nightBg;
-    document.body.style.color = nightTxt;
-    document.getElementById('select-preset').style.color = nightBg;
-    document.getElementById('customizeBtn').style.color = nightTxtCust;
-    document.getElementById('content-panel').style.backgroundColor = nightBg;
-    document.getElementById('select-header').style.color = nightBg;
-    document.getElementById('select-paragraph').style.color = nightBg;
+class switchEvent{
+  static switchClicked() {
+    const nightBg = '#141c29';
+    const nightTxt = 'white';
+    const nightTxtCust = '#00A8E8';
+    const dayBg = 'white';
+    const dayTxt = '#3b4351';
+    const dayTxtCust = '#007EA7';
+  
+    if(!nightMode){
+      switchEvent.switchMode(nightBg, nightTxt, nightTxtCust);
+    }
+    else{
+      switchEvent.switchMode(dayBg, dayTxt, dayTxtCust);
+    }
+  
+    if(nightMode) nightMode = false;
+    else nightMode = true;
   }
-  else{
-    document.body.style.backgroundColor = dayBg;
-    document.body.style.color = dayTxt;
-    document.getElementById('select-preset').style.color = dayTxt;
-    document.getElementById('customizeBtn').style.color = dayTxtCust;
-    document.getElementById('content-panel').style.backgroundColor = dayBg;
+  static switchMode(select, text, custText){
+    document.body.style.backgroundColor = select;
+    document.body.style.color = text;
+    document.getElementById('select-preset').style.color = select;
+    document.getElementById('customizeBtn').style.color = custText;
+    document.getElementById('content-panel').style.backgroundColor = select;
+    if(select !== 'white')
+    {
+      document.getElementById('select-header').style.color = select;
+      document.getElementById('select-paragraph').style.color = select;
+    }
   }
-
-  if(nightMode) nightMode = false;
-  else nightMode = true;
 }
+
+//Event: switch button - day/night mode
+document.getElementById('switch')
+        .addEventListener('input', () => switchEvent.switchClicked());
+
