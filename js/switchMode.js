@@ -1,4 +1,4 @@
-let nightMode = false;
+let isSwitched = false;
 class switchEvent{
   // When switch toggle is click
   static switchClicked() {
@@ -9,15 +9,15 @@ class switchEvent{
     const dayTxt = '#3b4351';
     const dayTxtCust = '#007EA7';
 
-    if(!nightMode){
+    if(!isSwitched){
       switchEvent.switchMode(nightBg, nightTxt, nightTxtCust);
       switchEvent.changeTextColor(nightBg);
-      nightMode = true
+      isSwitched = true
     }
     else{
       switchEvent.switchMode(dayBg, dayTxt, dayTxtCust);
       switchEvent.changeTextColor(dayTxt);
-      nightMode = false
+      isSwitched = false
     }
   }
   // Switch to different mode
