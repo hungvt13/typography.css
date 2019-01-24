@@ -1,5 +1,5 @@
 let isSwitched = false;
-export default class switchEvent{
+export default class SwitchEvent{
   // When switch toggle is click
   static switchClicked() {
     const nightBg = '#141c29';
@@ -10,13 +10,13 @@ export default class switchEvent{
     const dayTxtCust = '#007EA7';
 
     if(!isSwitched){
-      switchEvent.switchMode(nightBg, nightTxt, nightTxtCust);
-      switchEvent.changeTextColor(nightBg);
+      SwitchEvent.switchMode(nightBg, nightTxt, nightTxtCust);
+      SwitchEvent.changeTextColor(nightBg);
       isSwitched = true
     }
     else{
-      switchEvent.switchMode(dayBg, dayTxt, dayTxtCust);
-      switchEvent.changeTextColor(dayTxt);
+      SwitchEvent.switchMode(dayBg, dayTxt, dayTxtCust);
+      SwitchEvent.changeTextColor(dayTxt);
       isSwitched = false
     }
   }

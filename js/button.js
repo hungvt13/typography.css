@@ -1,12 +1,10 @@
-const customizeForm = require('./customizeForm.js').default;
-const UI = require('./mainForm.js').default;
-
-
+import CustomizeForm from './customizeForm.js';
+import UI from './mainForm';
 
 // Control the html display on customize button
 let isCustomize = false;
 
-export default class buttonEvent{
+export default class ButtonEvent{
     // Function to swapping names for toggle buttons
     static changeToggleBtn(ele, beforeName, afterName){
         // Change the Customize buttons when clicked
@@ -19,7 +17,7 @@ export default class buttonEvent{
         else{
         isCustomize = false;
         custBtn.innerHTML = beforeName;
-        buttonEvent.goBackPresets();
+        ButtonEvent.goBackPresets();
         }
     };
 
@@ -60,8 +58,8 @@ export default class buttonEvent{
         const classList = UI.getClassList('sample-text');
         if(classList[1] !== 'undefined') classList.remove(classList[1]);
     
-        customizeForm.changeClassHeader();
-        customizeForm.changeClassParagraph();
+        CustomizeForm.changeClassHeader();
+        CustomizeForm.changeClassParagraph();
     
         // Expand & collapise the element
         custBtn.toggle('active');
@@ -86,6 +84,6 @@ export default class buttonEvent{
         select.style.display = 'none';
         label.style.display = 'none';
         }
-        buttonEvent.changeToggleBtn('customizeBtn', 'customize', 'preset');
+        ButtonEvent.changeToggleBtn('customizeBtn', 'customize', 'preset');
     };
 }

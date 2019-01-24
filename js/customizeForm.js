@@ -1,14 +1,14 @@
-const optionsList = require('./optionsList.js').default;
-const UI = require('./mainForm.js').default;
+import OptionsList from './optionsList.js';
+import UI from './mainForm';
 
-export default class customizeForm{
+export default class CustomizeForm{
   /*
   *Mapping values to customize options
   *self invoke
   */
   static displayCustomizeOptions(){
-    const options = optionsList.getList();
-    options.map(item => customizeForm.addCustomizeOptions(item));
+    const options = OptionsList.getList();
+    options.map(item => CustomizeForm.addCustomizeOptions(item));
   }
   // add options to customize list
   static addCustomizeOptions(item) {

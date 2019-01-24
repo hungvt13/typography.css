@@ -1,10 +1,10 @@
-const optionsList = require('./optionsList.js').default;
+import OptionsList from './optionsList.js' ;
 
 export default class UI {
   // display options to the UI
   static displayOptions() {
     // tempo store for options
-    const options = optionsList.getList();
+    const options = OptionsList.getList();
 
     // add items to the select options
     options.map(item => UI.addOptionToList(item));
@@ -15,8 +15,8 @@ export default class UI {
   // add items to options List
   static addOptionToList(item) {
     const select = document.getElementById('select-preset');
-    const optionList = select.options;
-    optionList.add(new Option(item.text, item.value, item.selected))
+    const list = select.options;
+    list.add(new Option(item.text, item.value, item.selected))
   }
 
   // apply option[class] to a class byid
