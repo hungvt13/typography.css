@@ -8,12 +8,7 @@ document.addEventListener('DOMContentLoaded', UI.displayOptions());
 
 // Change class based on selected preset
 // Event: listen to preset select changes
-document.getElementById('select-preset').addEventListener('change', () => {
-  const classList = UI.getClassList('sample-text');
-  const selectedStyle = UI.getSelected('select-preset');
-  classList.remove(classList[1]);
-  classList.add(selectedStyle);
-});
+document.getElementById('select-preset').addEventListener('change', () => UI.changePreset());
 
 //Event: load cust options
 document.addEventListener('DOMContentLoaded', () => customizeForm.displayCustomizeOptions());

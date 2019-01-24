@@ -33,4 +33,12 @@ export default class UI {
   static getSelected(ele) { 
     return document.getElementById(ele).value;
   }
+
+  // change preset
+  static changePreset(){
+    const classList = UI.getClassList('sample-text');
+    const selectedStyle = UI.getSelected('select-preset');
+    classList.remove(classList[1]);
+    classList.add(selectedStyle);
+  }
 }
