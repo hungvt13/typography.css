@@ -1,7 +1,12 @@
+const customizeForm = require('./customizeForm.js').default;
+const UI = require('./mainForm.js').default;
+
+
+
 // Control the html display on customize button
 let isCustomize = false;
 
-class buttonEvent{
+export default class buttonEvent{
     // Function to swapping names for toggle buttons
     static changeToggleBtn(ele, beforeName, afterName){
         // Change the Customize buttons when clicked
@@ -84,5 +89,3 @@ class buttonEvent{
         buttonEvent.changeToggleBtn('customizeBtn', 'customize', 'preset');
     };
 }
-
-document.getElementById('customizeBtn').addEventListener('click', () => buttonEvent.custBtnClicked());

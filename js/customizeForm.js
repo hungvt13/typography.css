@@ -1,4 +1,7 @@
-class customizeForm{
+const optionsList = require('./optionsList.js').default;
+const UI = require('./mainForm.js').default;
+
+export default class customizeForm{
   /*
   *Mapping values to customize options
   *self invoke
@@ -48,15 +51,3 @@ class customizeForm{
   };
 }
 
-//Event: load cust options
-document.addEventListener('DOMContentLoaded', () => customizeForm.displayCustomizeOptions());
-
-//Event: listen to Headers changes
-document.getElementById('select-header')
-        .addEventListener('change', () => customizeForm.changeClassHeader());
-
-//Event: listen to Paragraph changes
-document.getElementById('select-paragraph')
-        .addEventListener('change', () => customizeForm.changeClassParagraph());
-
-// Coll[0].addEventListener('click', function() );

@@ -1,5 +1,5 @@
 let isSwitched = false;
-class switchEvent{
+export default class switchEvent{
   // When switch toggle is click
   static switchClicked() {
     const nightBg = '#141c29';
@@ -34,7 +34,3 @@ class switchEvent{
     document.getElementById('select-paragraph').style.color = color;
   }
 }
-
-//Event: switch button - day/night mode
-document.getElementById('switch')
-        .addEventListener('input', () => switchEvent.switchClicked());
