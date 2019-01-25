@@ -30,7 +30,7 @@ export default class UI {
   }
 
   // get current selected style
-  static getSelected(ele) { 
+  static getSelected(ele) {
     return document.getElementById(ele).value;
   }
 
