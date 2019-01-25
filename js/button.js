@@ -9,7 +9,7 @@ export default class ButtonEvent{
     static changeToggleBtn(ele, beforeName, afterName){
         // Change the Customize buttons when clicked
         const custBtn = document.getElementById(ele);
-    
+
         if(!isCustomize){
         isCustomize = true;
         custBtn.innerHTML = afterName;
@@ -42,10 +42,10 @@ export default class ButtonEvent{
         const label = document.getElementById('label');
         const selectHeader = document.getElementById('select-header');
         const selectParagraph = document.getElementById('select-paragraph');
-    
+
         // Get class list for the customize buttons
         const custBtn = UI.getClassList('customizeBtn');
-    
+
         /*
         * Get the current selected preset
         * set start values for the two options
@@ -53,18 +53,18 @@ export default class ButtonEvent{
         const select = document.getElementById('select-preset');
         selectHeader.selectedIndex = select.selectedIndex;
         selectParagraph.selectedIndex = select.selectedIndex;
-    
+
         // Check if preset class exist, delete if yes
         const classList = UI.getClassList('sample-text');
         if(classList[1] !== 'undefined') classList.remove(classList[1]);
-    
+
         CustomizeForm.changeClassHeader();
         CustomizeForm.changeClassParagraph();
-    
+
         // Expand & collapise the element
         custBtn.toggle('active');
         const content = document.getElementById('content-panel');
-    
+
         /*
         * If clicked show the preset elements
         * hide the customize options
@@ -74,7 +74,7 @@ export default class ButtonEvent{
         select.style.display = 'flex'; // The preset element
         label.style.display = 'flex'; // The label for preset element
         }
-    
+
         /*
         * Hide the preset elements
         * show the customize options
