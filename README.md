@@ -1,12 +1,12 @@
+# Website
+Please switch to gh-pages branch to see the demo structure and implementation
+
+
 # typography.css [![GitHub release](https://img.shields.io/github/release-pre/hungvt13/typography.css.svg)](https://github.com/hungvt13/typography.css) [![npm version](https://badge.fury.io/js/ht-typography.css.svg)](https://badge.fury.io/js/ht-typography.css) ![](https://img.shields.io/npm/l/express.svg)
 
 _Plug and use preset fonts CSS_
 
 [Demo](https://hungvt13.github.io/typography.css/)
-
-# Website
-
-Please switch to gh-pages branch to see the demo structure and implementation
 
 `typography.css` is a css that change your default font using more beautiful preset. Great to use in projects that emphasis on typography.
 
